@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Login</title>
+<style>
+.topnav { overflow: hidden;
+background-color: #333;
+
+} .topnav a { float: left; color: #f2f2f2;
+text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px;
+}.topnav a:hover { background-color:red; color:black;
+}
+
+    body{
+        background-image: linear-gradient(to right, #E9967A, #8FBC8F);
+    
+    }
+</style>
+</head>
+<body align="center" >
+<div class="topnav">
+
+<a class="active" >Login</a>
+
+<a href="homepage.html" target="_blank">Home</a>
+
+<a href="tickets.html" target="_blank">Tickets</a>
+
+<a href="eligibility.html" target="_blank">Eligibility</a>
+
+<a href="contact.html" target="_blank">Contact Us</a>
+
+<a href="offers.html" target="_blank">Offers</a>
+
+<a href="image.html"  target="_blank" >Image</a>
+
+<a href="register.html"  target="_blank">Register</a>
+
+<a href="terms.html"  target="_blank">Terms And Conditions</a>
+
+
+</div>
+<form action="" method="POST">
+    <br><br><br><br>
+<h1 align="center" >Login to the Website</h1>
+
+	<tr> 
+	<td>Username:</td> 
+	<td><input class="txt" name="uname" id="userid" type="text" min="5" max="12"  placeholder="Enter USER ID" style="color: gray;"/></td> 
+	</tr> <br>
+	<tr> 
+	<td>Password:</td> 
+	<td><input class="txt" type="password" id="pwd" placeholder="Enter Password" style="color: gray;"/></td> 
+	</tr> <br>
+	<tr> 
+	<td></td> 
+	<td><a href="tickets.html" ><input type="button" onclick="validate()" value="Log In" class="btn"></a>
+	<input type="submit" value="forget password" class="btn"/></tr><br>
+	<td></td><td> <a href="register.html"><input type="button" value="Sign Up" class="btn"></a></td>
+	</table>
+	</center>
+	</form>
+
+
+	<script>
+		function validate(){
+		  var x, text;
+		
+		  // Get the value of the input field with id="userid and pwd respectively"
+		  x = document.getElementById("userid").value;
+		  pwd = document.getElementById("pwd").value;
+
+		  if (x !=085 && x !=095 && x !=067) {
+			text = alert('INVALID USER ID !!! PLEASE TRY AGAIN !!!');
+		  } 
+		  if(pwd != 9876){
+			alert('INVALID PASSWORD !!! PLEASE TRY AGAIN !!!');
+		  }
+		}
+	</script>
+
+<img src="https://media0.giphy.com/media/Rx0o2ODEIhR4Y/200w.webp?cid=ecf05e4716wty3v0hr2i5w0alhylgg9qku0znuxl8f0bxhva&rid=200w.webp">
+</body>
+</html>

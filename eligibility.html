@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>check your eligibility</title>
+<style>
+.topnav { overflow: hidden;
+background-color: #333;
+
+} .topnav a { float: left; color: #f2f2f2;
+text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px;
+}.topnav a:hover { background-color:red; color:black;
+}
+body
+
+{
+background-image:linear-gradient(to right,pink,olive);
+background-position:center;
+background-size:cover;
+background-repeat:no-repeat;
+background-attachment:fixed;
+}
+</style>
+<style>
+h1{
+height:40px;
+width:1200px;
+padding:1px;
+border:5px groove white;
+margin:1px;
+font-color:white;
+background-color:black;
+}
+
+</style>
+</Head>
+<Body>
+<div class="topnav">
+
+<a class="active" >Home</a>
+
+<a href="image.html" target="_blank">Image</a>
+
+<a href="tickets.html" target="_blank">Tickets</a>
+
+<a href="eligibility.html" target="_blank">Eligibility</a>
+
+<a href="contact.html" target="_blank">Contact Us</a>
+
+<a href="offers.html" target="_blank">Offers</a>
+
+<a href="login.html"  target="_blank" >Login</a>
+
+<a href="register.html"  target="_blank">Register</a>
+
+<a href="terms.html"  target="_blank">Terms And Conditions</a>
+
+
+</div>
+<center>
+
+
+<h1><font color="white">Enter your age to check the eligibility</font></h1></center>
+<br/>
+<br/>
+<br/>
+<script type="text/javascript">
+var x;
+x=window.prompt(" enter you age in number");
+x=parseInt(x);
+if(x<16)
+{
+document.write(" YOU ARE UNDER JUNIOR CATEGORY.YOU ARE NOT SUPPOSED TO TRAVEL ALONE");
+}
+ else if(x>16)
+{
+
+document.write(" YOU ARE UNDER SENIOR CATEGORY");
+}
+else
+{
+document.write(" YOR ARE UNDER ADULT ");
+}
+</script>
+</body>
+</html>

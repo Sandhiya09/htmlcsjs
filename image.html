@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.topnav { overflow: hidden;
+background-color: #333;
+
+} .topnav a { float: left; color: #f2f2f2;
+text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px;
+}.topnav a:hover { background-color:red; color:black;
+}
+.mySlides {display:none;}
+</style>
+<body bgcolor="black">
+<div class="topnav">
+
+<a class="active" >Home</a>
+
+<a href="image.html" target="_blank">Image</a>
+
+<a href="tickets.html" target="_blank">Tickets</a>
+
+<a href="eligibility.html" target="_blank">Eligibility</a>
+
+<a href="contact.html" target="_blank">Contact Us</a>
+
+<a href="offers.html" target="_blank">Offers</a>
+
+<a href="login.html"  target="_blank" >Login</a>
+
+<a href="register.html"  target="_blank">Register</a>
+
+<a href="terms.html"  target="_blank">Terms And Conditions</a>
+
+
+</div>
+
+
+<h2 class="w3-center">Manual Slideshow</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="first.jpeg" style="width:50%">
+  <img class="mySlides" src="2nd.jpeg" style="width:50%">
+  <img class="mySlides" src="3rd.jpeg" style="width:50%">
+  <img class="mySlides" src="4th.jpeg" style="width:50%">
+  
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</body>
+</html>
+

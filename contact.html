@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+.topnav { overflow: hidden;
+background-color: #333;
+
+} .topnav a { float: left; color: #f2f2f2;
+text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px;
+}.topnav a:hover { background-color:red; color:black;
+}
+ body {
+font-family: Arial, Helvetica, sans-serif;
+background-image: linear-gradient(to right, #F7CAC9, #DFCFBE);
+
+}
+*{
+box-sizing: border-box;
+
+}
+input[type=text], select, textarea { width: 100%;
+padding: 12px;
+border: 1px solid #ccc; margin-top: 6px; margin-bottom: 16px; resize: vertical;
+}
+input[type=submit] { background-color: #4CAF50; color: white;
+padding: 12px 20px; border: none; cursor: pointer;
+}
+input[type=submit]:hover { background-color: #45a049;
+}
+.container {
+border-radius: 5px;
+
+background-color: grey; padding: 10px;
+}
+
+.column { float: left; width: 50%;
+margin-top: 6px; padding: 20px;
+}
+.row:after { content: ""; display: table; clear: both;
+}
+@media screen and (max-width: 600px) {
+.column, input[type=submit] { width: 100%;
+margin-top: 0;
+
+}
+}
+
+</style>
+</head>
+<body bgcolor="yellow">
+<div class="topnav">
+
+<a class="active" Contact Us</a>
+
+<a href="image.html" target="_blank">Image</a>
+
+<a href="tickets.html" target="_blank">Tickets</a>
+
+<a href="eligibility.html" target="_blank">Eligibility</a>
+
+<a href="homepage.html" target="_blank">Home</a>
+
+<a href="offers.html" target="_blank">Offers</a>
+
+<a href="login.html"  target="_blank" >Login</a>
+
+<a href="register.html"  target="_blank">Register</a>
+
+<a href="terms.html"  target="_blank">Terms And Conditions</a>
+
+
+</div>
+
+<h2 align="center">Contact us to leave a message</h2>
+<div class="container">
+<div style="text-align:center">
+<h1>Feel free to contact us or leave us a message:</H1>
+
+</div>
+<div class="row">
+<div class="column">
+<img src="2nd.jpeg" style="width:80%">
+</div>
+<div class="column">
+<form name="myform" onsubmit="return validate()">
+<label>First Name</label><br>
+<input type="text" name="firstname" placeholder="First Name" required>
+<label>Last Name</label>
+<input type="text" name="lastname" placeholder="Last Name" required>
+<label>Contact Number</label>
+<input type="text" name="cnt no" placeholder="9102837465" pattern="[0- 9]{10}" required>
+<label>Email address</label>
+<input type="text" name="mail" placeholder="sadhiya123@gmail.com" required>
+
+
+<label for="country">Country</label>
+<select id="country" name="country">
+<option value="India">India</option>
+<option value="London">London</option>
+<option value="Singapore">Singapore</option>
+<option value="australia">Australia</option>
+<option value="canada">Canada</option>
+<option value="usa">USA</option>
+</select>
+<label for="subject">Subject</label>
+
+<textarea id="subject" name="subject" placeholder="Write something.." pattern="[a-zA-Z]{50}" style="height:170px" required></textarea>
+<input type="submit" value="Submit">
+</form>
+</div>
+</div>
+</div>
+<script>
+function validate()
+{
+var x=document.forms["myform"]["firstname"].value; var y=document.forms["myform"]["lastname"].value; var z=document.forms["myform"]["country"].value; var a=document.forms["myform"]["subject"].value; var letters=/^[A-Za-z]+$/;
+if(x.match(letters));
+{
+document.getElementById("out1").innerHTML=x; return false;
+}
+else if(y.match(letters));
+{
+document.getElementById("out2").innerHTML=y; return false;
+}
+else if(z.match(letters));
+{
+
+document.getElementById("out3").innerHTML=z; return false;
+}
+else if(a.match(letters));
+{
+document.getElementById("out4").innerHTML=a; return false;
+}
+else
+{ alert("Must be filled with letters!!!");
+} }
+function func1() { validate(); }
+</body>
+</html>
